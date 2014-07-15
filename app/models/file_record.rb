@@ -1,12 +1,14 @@
 class FileRecord < ActiveRecord::Base
 	has_many :steps , dependent: :destroy
-	
-	after_save :start_step
+
+	after_create :start_step
 
 	def start_step
-		file_record = FileRecord.last
-		steps = Step.new
-		steps.start file_record
+		steps.build.start
+	end
+
+	def archivate
+		steps.build.archivate_step
 	end
 
 end

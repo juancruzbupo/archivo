@@ -11,7 +11,7 @@ class FileRecordsController < ApplicationController
   # GET /file_records/1.json
   def show
     @file_records = FileRecord.find(set_file_record)
-    @step = Step.find_by(file_record: @file_records)
+    @step = @file_record.steps.build
   end
 
   # GET /file_records/new
