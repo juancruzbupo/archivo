@@ -3,8 +3,6 @@ class Step < ActiveRecord::Base
   belongs_to :person
   belongs_to :office
 
-  attr_accessor :office
-
   def start
     self.office = Office.start_office
     save

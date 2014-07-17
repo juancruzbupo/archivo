@@ -10,7 +10,7 @@
   	<br>
     <% @file_record.steps.each do |step| %>
   	<tr>
-        <td><%= step.office.name %></td>
+        <td><%= step.office.name  if step.office%></td>
     </tr>
     <%end%>
 </p>
