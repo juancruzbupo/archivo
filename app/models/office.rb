@@ -1,7 +1,9 @@
 class Office < ActiveRecord::Base
 	has_many :steps , dependent: :destroy
 
-	def start_office
+	attr_accessor :steps
+
+	def self.start_office
 		Office.find_or_create_by(name: 'Mesa de Entrada')
 	end
 

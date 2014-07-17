@@ -6,7 +6,7 @@ class Step < ActiveRecord::Base
   attr_accessor :office
 
   def start
-    self.office.start_office
+    self.office = Office.start_office
     save
   end
 
