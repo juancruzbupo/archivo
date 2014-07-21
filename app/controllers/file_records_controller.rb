@@ -1,10 +1,7 @@
 class FileRecordsController < InheritedResources::Base
-  before_action :authenticate_user!
-
-  # GET /file_records/1
-  # GET /file_records/1.json
+  
   def show
-    @file_records = FileRecord.find(set_file_record)
+    super
     @step = @file_record.steps.build
   end
 
