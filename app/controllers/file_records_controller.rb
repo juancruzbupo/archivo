@@ -1,5 +1,4 @@
 class FileRecordsController < InheritedResources::Base
-  before_action :set_file_record, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
   # GET /file_records/1
