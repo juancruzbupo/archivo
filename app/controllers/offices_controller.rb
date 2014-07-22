@@ -1,7 +1,6 @@
 class OfficesController < InheritedResources::Base
-  
-  private
-    def office_params
-      params.require(:office).permit(:name)
+  protected
+    def permitted_params
+      params.permit(:office => [:name])
     end
 end

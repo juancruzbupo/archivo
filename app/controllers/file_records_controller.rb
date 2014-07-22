@@ -4,9 +4,9 @@ class FileRecordsController < InheritedResources::Base
     super
     @step = @file_record.steps.build
   end
-
-  private
-    def file_record_params
-      params.require(:file_record).permit(:title)
+  
+  protected
+    def permitted_params
+      params.permit(:file_record => [:title])
     end
 end
