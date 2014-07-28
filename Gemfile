@@ -41,3 +41,13 @@ gem 'spring',        group: :development
 gem 'devise'
 
 gem 'inherited_resources'
+
+gem 'pry'
+
+gem 'rails_backend', github:'bluelemons/rails_backend', branch: 'bootstrap3'
+
+gem 'will_paginate'
+
+gem 'ransack'
+
+gem 'less-rails-bootstrap' 
